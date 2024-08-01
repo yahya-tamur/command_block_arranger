@@ -48,7 +48,8 @@ let configs = {
 }
 
 function mangle(x, y, z, inp) {
-    let l = inp.indexOf('[')
+    inp = '\n' + inp
+    let l = inp.indexOf('\n[')
 
     let array = []
 
@@ -57,7 +58,7 @@ function mangle(x, y, z, inp) {
 
         //facing, type, always active, conditional
         let config = ['north', '', '', 'false']
-        let [dx, dy, dz, ...cfgs] = inp.substring(l + 1, r).split(',')
+        let [dx, dy, dz, ...cfgs] = inp.substring(l + 2, r).split(',')
         dx = Number(dx)
         dy = Number(dy)
         dz = Number(dz)
@@ -82,9 +83,11 @@ options. Options aren't case-sensitive.\n` + String(Object.keys(configs)).replac
 
         console.log('asdasd', dx, dy, dz, config)
 
-        l = inp.indexOf('[', l + 1)
+        l = inp.indexOf('\n[', l + 1)
         let command = l == -1 ? inp.substring(r + 1) : inp.substring(r + 1, l)
+        console.log(command)
         command = command.trim().replaceAll(`'`, `\\\\\\'`)
+        console.log(command)
 
         let supercommand = `setblock ${x + dx} ${y + dy} ${z + dz} \
 ${config[1]}command_block[conditional=${config[3]},facing=${config[0]}]\
