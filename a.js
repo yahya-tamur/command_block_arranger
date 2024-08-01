@@ -3,14 +3,14 @@ document.getElementById('copy').onclick = () => {
     xyz = xyz.slice(1, -1)
     let [l, r] = [xyz.indexOf(' '), xyz.lastIndexOf(' ')]
     if (l == r) {
-        alert(`Please enter the target coordinates, like '18 66 2'`);
+        alert(`Please enter the target coordinates, in the format '18 66 2'`);
         return;
     }
     let x = Number(xyz.substring(0, l))
     let y = Number(xyz.substring(l, r))
     let z = Number(xyz.substring(r))
     if (isNaN(x) || isNaN(y) || isNaN(z)) {
-        alert(`Please enter the target coordinates, like '18 66 2'`);
+        alert(`Please enter the target coordinates, in the format '18 66 -2'`);
         return;
     }
     let textbox = document.getElementById('textbox')
@@ -65,13 +65,20 @@ function mangle(x, y, z, inp) {
         //facing, type, always active, conditional
         let config = ['north', '', '', 'false']
         let [dx, dy, dz, ...cfgs] = inp.substring(l + 2, r).split(',')
+
+        if (dx.trim().length == 0 || dy.trim().length == 0 || dz.trim().length == 0) {
+            alert(`Each command should be prefixed by the relative position \
+in square brackets, maybe followed by options, in the format '[0, 0, 0]' or ' \
+[0, 0, 0, always_active]`)
+            return ''
+        }
         dx = Number(dx)
         dy = Number(dy)
         dz = Number(dz)
 
         if (isNaN(dx) || isNaN(dy) || isNaN(dz)) {
             alert(`Each command should be prefixed by the relative position \
-in square brackets, maybe followed by options, like '[0, 0, 0]' or ' \
+in square brackets, maybe followed by options, in the format '[0, 0, 0]' or ' \
 [0, 0, 0, always_active]`)
             return ''
         }
@@ -100,7 +107,7 @@ ${config[1]}command_block[conditional=${config[3]},facing=${config[0]}]\
         array.push(supercommand)
     }
     if (array.length == 0) {
-        alert(`Please enter at least one command, like "[0, 0, 0] say 'a'"`)
+        alert(`Please enter at least one command, in the format "[0, 0, 0] say 'a'"`)
         return ''
     }
     let fullcommand = start + array.reduce((a, b) => a + mid + b) + end

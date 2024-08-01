@@ -1,14 +1,11 @@
 Hosted on github pages here: [yahya-tamur.github.io/command_block_arranger](https://yahya-tamur.github.io/command_block_arranger)
 
-Configure *any* number of command blocks using text!
+Configure any number of command blocks, and put all of them in your world by
+running a single command!
 
-Here's the problem: It's really annoying to edit a long command inside a
-command block. You can edit it in Notepad, but if you have multiple command
-blocks, it's still annoying to change all of them.
-
-One solution is using functions in a data pack, instead of command blocks.
-But then, if you're on a server, you would have to change the data pack and
-reset the server every time.
+Another solution would be using functions in a data pack, instead of command
+blocks. But then, if you're on a server, you would have to change the data pack
+and reset the server every time.
 
 This lets you write many command blocks and paste all of them into your world
 with a single command.
@@ -34,7 +31,7 @@ I got the falling sand thing from user 'Khoeckman' in
 [this post](https://www.minecraftforum.net/forums/minecraft-java-edition/redstone-discussion-and/commands-command-blocks-and/2980388-1-14-1-17-multiple-commands-in-one-command-block).
 
 
-notes:
+Notes:
 ------
 * I always like writing programs-inside-programs like these. It might be my
 highest number of consecutive backslashes yet, at 8.
@@ -48,6 +45,7 @@ command block doesn't override the command.
 whitespace at the beginning and end of a command is removed, so feel free to
 enter the command in the next line.
 * There's a 32,500 character limit on command block commands. Since all the
-commands inputted here go into a single command, a rule of thumb is that if the
-total number of characters is close to that, you might have to do multiple
-batches.
+commands you put in go into a single command, a rule of thumb is that if the
+total number of characters is close to that, you might want to edit the text
+in Notepad and paste it in ten to one hundred lines at a time, depending on the
+length.
