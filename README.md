@@ -1,4 +1,4 @@
-Hosted on github pages here: [yahya-tamur.github.io/command_block_arranger]()
+Hosted on github pages here: [yahya-tamur.github.io/command_block_arranger](yahya-tamur.github.io/command_block_arranger)
 
 Configure *any* number of command blocks using text!
 
