@@ -44,6 +44,6 @@ this more user-friendly.
 * setblock is set to 'destroy' the previous blocks, since 'replace'ing a
 command block doesn't override the command.
 * I don't own the armored core image. It's from the wiki.
-* A command block specifications should go at the beginning of a line. The
+* A command block specification can only go at the beginning of a line. The
 whitespace at the beginning and end of a command is removed, so feel free to
 enter the command in the next line.
