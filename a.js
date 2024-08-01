@@ -86,7 +86,7 @@ options. Options aren't case-sensitive.\n` + String(Object.keys(configs)).replac
         l = inp.indexOf('\n[', l + 1)
         let command = l == -1 ? inp.substring(r + 1) : inp.substring(r + 1, l)
         console.log(command)
-        command = command.trim().replaceAll('\\', '\\\\').replaceAll(`'`, `\\\\\\'`)
+        command = command.trim().replaceAll('\\', '\\\\\\\\').replaceAll(`'`, `\\\\\\'`)
         console.log(command)
 
         let supercommand = `setblock ${x + dx} ${y + dy} ${z + dz} \
