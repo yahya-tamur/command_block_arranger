@@ -91,7 +91,7 @@ options. Options aren't case-sensitive.\n` + String(Object.keys(configs)).replac
 
         let supercommand = `setblock ${x + dx} ${y + dy} ${z + dz} \
 ${config[1]}command_block[conditional=${config[3]},facing=${config[0]}]\
-{${config[2]}Command:\\'${command}\\'} replace`
+{${config[2]}Command:\\'${command}\\'} destroy`
         console.log(config, supercommand)
 
         //command = command.replaceAll(' ', '').replaceAll('\n', '')

@@ -21,11 +21,13 @@
     width: calc(100% - 6px);
     height: 500px;
     font-family: monospace;
+    text-wrap: nowrap;
 }
 
 
 #copy {
     margin-left: 220px;
+    margin-right: 220px;
     margin-top: 30px;
     border: 3px solid #73AD21;
     height: 40px;
@@ -33,6 +35,9 @@
 }
 
 #algebra {
-    margin-top: 50px;
     width: 100%;
+}
+
+#link {
+    margin-left: 352px;
 }
