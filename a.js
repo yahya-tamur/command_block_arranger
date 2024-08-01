@@ -4,7 +4,6 @@ document.getElementById('copy').onclick = () => {
         alert(`Please enter the target coordinates, like '18, 66, 2'`);
         return;
     }
-    console.log(x, y, z)
     let textbox = document.getElementById('textbox')
     let m = mangle(x, y, z, textbox.value)
     if (m.length > 0) {
@@ -81,18 +80,14 @@ options. Options aren't case-sensitive.\n` + String(Object.keys(configs)).replac
             config[a] = b
         }
 
-        console.log('asdasd', dx, dy, dz, config)
 
         l = inp.indexOf('\n[', l + 1)
         let command = l == -1 ? inp.substring(r + 1) : inp.substring(r + 1, l)
-        console.log(command)
         command = command.trim().replaceAll('\\', '\\\\\\\\').replaceAll(`'`, `\\\\\\'`)
-        console.log(command)
 
         let supercommand = `setblock ${x + dx} ${y + dy} ${z + dz} \
 ${config[1]}command_block[conditional=${config[3]},facing=${config[0]}]\
 {${config[2]}Command:\\'${command}\\'} destroy`
-        console.log(config, supercommand)
 
         //command = command.replaceAll(' ', '').replaceAll('\n', '')
         array.push(supercommand)

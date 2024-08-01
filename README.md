@@ -7,8 +7,8 @@ command block. You can edit it in Notepad, but if you have multiple command
 blocks, it's still annoying to change all of them.
 
 One solution is using functions in a data pack, instead of command blocks.
-But then, if it's a server, you would have to change the data pack and reset
-the server every time.
+But then, if you're on a server, you would have to change the data pack and
+reset the server every time.
 
 This lets you write many command blocks and paste all of them into your world
 with a single command.
@@ -30,45 +30,19 @@ Minecraft. Paste the command, and activate the block. It will do some falling
 sand hack to run a separate 'setblock' command for each specified command, 
 then destroy itself.
 
+I got the falling sand thing from user 'Khoeckman' in
+[this post](https://www.minecraftforum.net/forums/minecraft-java-edition/redstone-discussion-and/commands-command-blocks-and/2980388-1-14-1-17-multiple-commands-in-one-command-block).
 
-to do:
------
-
-[#] make with just coordinates
-
- -- feature complete --
-
-[#] full configuration
-
-[#] favicon
-
-[#] worked with a pretty complicated command! (there might still be problems)
-
-[ ] try with a pretty complicated set of command blocks
-
-
-[ ] url - sharing like topaz
-
-[ ] better readme
-
-[ ] format json? collapse json? input json + ask people to format it themselves? just turn off text wrap lmao? or just increase width?
 
 notes:
 ------
 * I always like writing programs-inside-programs like these. It might be my
 highest number of consecutive backslashes yet, at 8.
 * I haven't played Minecraft in a while, so I'm kind of guessing what would be
-useful. Feel free to let me know if there's any changes I can make to make this
-more user-friendly.
-* setblock is set to 'destroy' the previous blocks, since 'replace' doesn't
-override the command. If you're worried about the entities created by this,
-setblock 'replace' the places the command blocks are going to go to with air
-first. This is more useful, since I found that most often, I'll make a small
-change to the commands and run the whole command again, replacing command
-blocks, which requires the 'destroy'.
-* Since minecraft commands can get pretty long, I've turned off the text
-wrapping in the textbox. You can paste this into to terminal to turn it back on:
-`document.getElementById('textbox').style['text-wrap'] = 'wrap'`
+useful. Feel free to let me know if there are any changes I can make to make
+this more user-friendly.
+* setblock is set to 'destroy' the previous blocks, since 'replace'ing a
+command block doesn't override the command.
 * I don't own the armored core image. It's from the wiki.
 * A command block specifications should go at the beginning of a line. The
 whitespace at the beginning and end of a command is removed, so feel free to
