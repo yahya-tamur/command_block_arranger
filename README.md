@@ -47,3 +47,7 @@ command block doesn't override the command.
 * A command block specification can only go at the beginning of a line. The
 whitespace at the beginning and end of a command is removed, so feel free to
 enter the command in the next line.
+* There's a 32,500 character limit on command block commands. Since all the
+commands inputted here go into a single command, a rule of thumb is that if the
+total number of characters in all of the commands is somewhere close to that,
+you might have to do multiple batches.
