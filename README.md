@@ -1,4 +1,4 @@
-Hosted on github pages here: [](yahya-tamur.github.io/command_block_arranger)
+Hosted on github pages here: [yahya-tamur.github.io/command_block_arranger]()
 
 Configure *any* number of command blocks using text!
 
@@ -39,17 +39,19 @@ to do:
  -- feature complete --
 
 [#] full configuration
+
 [#] favicon
+
 [#] worked with a pretty complicated command! (there might still be problems)
+
 [ ] try with a pretty complicated set of command blocks
 
 
 [ ] url - sharing like topaz
+
 [ ] better readme
 
-[ ] format json?
-[ ] collapse json? input json + ask people to format it themselves?
-[ ] just turn off text wrap lmao? or just increase width?
+[ ] format json? collapse json? input json + ask people to format it themselves? just turn off text wrap lmao? or just increase width?
 
 notes:
 ------
