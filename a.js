@@ -49,10 +49,8 @@ let configs = {
     'aa': [2, 'auto:1,'],
     'auto': [2, 'auto:1,'],
     'always_active': [2, 'auto:1,'],
-    'cc': [3, 'true'],
+    'co': [3, 'true'],
     'conditional': [3, 'true'],
-    'uc': [3, 'false'],
-    'unconditional': [3, 'false']
 }
 
 function mangle(x, y, z, inp) {
