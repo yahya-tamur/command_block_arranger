@@ -14,8 +14,8 @@ This lets you write many command blocks and paste all of them into your world
 with a single command.
 
 Here's how it works:
-Input a target coordinate. Input any number of command block specifications,
-such as:
+Input the target coordinates, separated by spaces. Input any number of command
+block specifications, such as:
 ```
 [0, 0, 0, south] say 'aaaa'
 [0, 0, 1, south, always_active, chain] say 'bbbb'

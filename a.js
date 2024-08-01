@@ -1,7 +1,16 @@
 document.getElementById('copy').onclick = () => {
-    let [x, y, z] = eval('[' + document.getElementById('target').value + ']');
+    let xyz = (' ' + document.getElementById('target').value + ' ').replaceAll(/ +/g, ' ');
+    xyz = xyz.slice(1, -1)
+    let [l, r] = [xyz.indexOf(' '), xyz.lastIndexOf(' ')]
+    if (l == r) {
+        alert(`Please enter the target coordinates, like '18 66 2'`);
+        return;
+    }
+    let x = Number(xyz.substring(0, l))
+    let y = Number(xyz.substring(l, r))
+    let z = Number(xyz.substring(r))
     if (isNaN(x) || isNaN(y) || isNaN(z)) {
-        alert(`Please enter the target coordinates, like '18, 66, 2'`);
+        alert(`Please enter the target coordinates, like '18 66 2'`);
         return;
     }
     let textbox = document.getElementById('textbox')
